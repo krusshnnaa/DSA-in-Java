@@ -2,11 +2,7 @@ class Solution {
     static boolean isValid(int piles[],int k,int h){
         int totalhr=0;
         for(int i=0;i<piles.length;i++){
-            totalhr+=piles[i]/k;
-
-            if(piles[i]%k!=0){
-                totalhr++;
-            }
+            totalhr+=(piles[i]+k-1)/k;
 
             if(totalhr>h){
                 return false;
